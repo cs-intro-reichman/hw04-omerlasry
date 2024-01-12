@@ -25,9 +25,27 @@ public class StringOps {
         
     }
 
-    public static String capVowelsLowRest (String string) {
+ public static String capVowelsLowRest (String s) 
+	{
         // Write your code here:
-        return "";
+		String ans = "" ;
+		boolean test =false;
+		for(int i = 0 ; i<s.length() ; i++)
+		{
+			test =false;
+			char ch = s.charAt(i);
+			if(ch == 97 || ch == 101 || ch == 105 || ch == 111 || ch ==117 )
+			{
+				ans = ans + (char)(s.charAt(i)-32);
+				test = true;
+			}
+			if(ch>=65&&ch<=90)
+				ans = ans +(char)(s.charAt(i)+32);
+			else
+				if(test == false)
+					ans = ans + (char)s.charAt(i);
+		}
+        return ans;
     }
 
     public static String camelCase (String string) {
