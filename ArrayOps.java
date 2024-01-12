@@ -23,9 +23,10 @@ public class ArrayOps {
     }
 
 
-    public static int secondMaxValue(int [] array) 
+	public static int secondMaxValue(int [] array) 
 	{
         // Write your code here:
+		int count = 0 ;
 		int temp = array[0];
 		int max = array[0];
 		for(int i = 0 ; i <array.length ; i++)
@@ -34,9 +35,14 @@ public class ArrayOps {
 				max = array[i];
 		}
 		for(int i = 0 ; i<array.length;i++)
+		{
+			if(array[i]==max)
+				count++;
 			if(array[i]>temp && array[i]!=max)
 				temp = array[i];
-			
+		}
+		if(count >= 2)
+			return max;
         return temp;
     }
 
@@ -62,17 +68,16 @@ public class ArrayOps {
         // Write your code here:
 		if(array[0]>array[1])
 		{
-			for(int i = 2 ; i<array.length-1;i++)
+			for(int i = 1 ; i<array.length-1;i++)
 			{
-				if(array[i]>array[i+1])
+				if(array[i]<array[i+1])
 					return false;
 			}
 		}
-		for(int i = 2 ; i<array.length-1;i++)
-			if(array[i]<=array[i+1])
+		for(int i = 1 ; i<array.length-1;i++)
+			if(array[i]>=array[i+1])
 				return false;
 		return true;	
-
-    }
+	}
 
 }
