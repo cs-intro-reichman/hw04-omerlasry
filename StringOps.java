@@ -25,7 +25,7 @@ public class StringOps {
         
     }
 
- public static String capVowelsLowRest (String s) 
+    public static String capVowelsLowRest (String s) 
 	{
         // Write your code here:
 		String ans = "" ;
@@ -39,8 +39,10 @@ public class StringOps {
 				ans = ans + (char)(s.charAt(i)-32);
 				test = true;
 			}
-			if(ch>=65&&ch<=90)
+			if(ch>65&&ch<=90&&ch!=69&&ch!=73&&ch!=79&&ch!=80)
 				ans = ans +(char)(s.charAt(i)+32);
+				else if(ch>=65&&ch<=90)
+					ans = ans + (char)s.charAt(i);
 			else
 				if(test == false)
 					ans = ans + (char)s.charAt(i);
