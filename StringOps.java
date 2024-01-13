@@ -68,10 +68,8 @@ public class StringOps {
 				else
 					ans = ans +(char)(s.charAt(i+1));
 				i++;		
-			}	
-		
-		}
-			
+			}			
+		}			
         return ans;
     }
 
