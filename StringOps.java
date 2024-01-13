@@ -90,7 +90,7 @@ public class StringOps {
 			char ch = s.charAt(i);
 			if(ch == chr)
 			{
-				arr[count]=(char)(s.charAt(i));
+				arr[count]= i;;
 				count ++;
 			}
 		}
