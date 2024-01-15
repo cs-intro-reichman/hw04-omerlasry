@@ -61,7 +61,7 @@ public class StringOps {
 				ans = ans +(char)(s.charAt(i)+32);
 			else if(ch!=32)
 				ans = ans +(char)(s.charAt(i));	
-			if(ch == 32 && s.charAt(i+1)!=32)
+			if(ch == 32 && s.charAt(i+1)!=32&& i!=0)
 			{
 				if(s.charAt(i+1)>=97 && s.charAt(i+1)<=122)
 					ans = ans +(char)(s.charAt(i+1)-32);
